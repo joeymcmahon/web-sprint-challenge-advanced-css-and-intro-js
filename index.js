@@ -258,15 +258,14 @@ Use removeArtist to do the following:
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
 function removeArtist(array, number) {
-  for(let i = 0; i < array.length; i++){
-    if (array[i] === number){
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === number) {
       array.splice(i, 1)
     }
   }
-  return array.length;
+  return array;
 }
-console.log(removeArtist(artists, 1))
-
+  
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
 1. Receive an array
@@ -297,11 +296,11 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(array, number) {
+function lotsOfArt(array, number, key, key2) {
   const filteredArray = [];
   for (let i = 0; i < array.length; i++) {
-    if (array[i].includes(number)) {
-      filteredArray.push(array[i]);
+    if (array[i][key].includes(number)) {
+      filteredArray.push(array[i][key2]);
     }
   }
   return filteredArray;
