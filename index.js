@@ -243,7 +243,7 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  return artists.split()
+  return years.split()
 }
 
 
@@ -258,14 +258,8 @@ Use removeArtist to do the following:
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
 function removeArtist(array, number) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === number) {
-      array.splice(i, 1)
-    }
-  }
-  return array;
+  artists.removeArtist(artists, 19)
 }
-  
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
 1. Receive an array
@@ -296,11 +290,11 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(array, number, key, key2) {
+function lotsOfArt(array, number) {
   const filteredArray = [];
   for (let i = 0; i < array.length; i++) {
-    if (array[i][key].includes(number)) {
-      filteredArray.push(array[i][key2]);
+    if (array[i].includes(number)) {
+      filteredArray.push(array[i]);
     }
   }
   return filteredArray;
